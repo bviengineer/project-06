@@ -1,2 +1,2 @@
-# project-06
- Treehouse Appretince Program ~ Project #6 - Unit Testing
+# Treehouse Apprentice Program Project 06
+## Unit Testing
