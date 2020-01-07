@@ -8,9 +8,9 @@ class ListingBasicTest extends TestCase
     
     /** @test */
     function listingMustReceiveData() {
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(Exception::class);
        
         $listingBasic = new ListingBasic();
-        $listingBasic->setValues('1', 'test', 'www.test.com', 'tes@test.com', '@test', 'active', 'img/test.png');
+        $listingBasic->setValues();
     }
 }
