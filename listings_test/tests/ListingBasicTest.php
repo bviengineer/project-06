@@ -7,7 +7,7 @@ class ListingBasicTest extends TestCase
         // all three Exception messages are returned as expected.
     
     /** @test */
-    function listingMustReceiveData() {
+    function listingBasicMustReceiveData() {
         $this->expectException(Exception::class);
        
         $listingBasic = new ListingBasic();
