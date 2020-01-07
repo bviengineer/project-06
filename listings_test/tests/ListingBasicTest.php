@@ -8,6 +8,6 @@ class ListingBasicTest extends TestCase
     
     /** @test */
     function exceptionMessagesReturnedAsExpected() {
-
+        $this->expectException();
     }
 }
