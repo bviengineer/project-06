@@ -7,7 +7,10 @@ class ListingBasicTest extends TestCase
         // all three Exception messages are returned as expected.
     
     /** @test */
-    function exceptionMessagesReturnedAsExpected() {
-        $this->expectException();
+    function listingMustReceiveData() {
+        $this->expectException(InvalidArgumentException::class);
+        
+        $listingBasic = new ListingBasic();
+        $listingBasic->setValues("test");
     }
 }
