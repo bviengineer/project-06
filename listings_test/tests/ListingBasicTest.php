@@ -47,15 +47,16 @@ class ListingBasicTest extends TestCase
     function getStatusMethodReturnsBasic()
     {
         $returnStatus = new ListingBasic();
-        $status = $returnStatus->getStatus();
+        $status = $returnStatus->setStatus('basic');
+
+        $this->assertEquals($status, $returnStatus->getStatus());
+
         //$myStatus = 'basic';
-        
         // $this->assertThat(
         //     $myStatus,
         //     $this->equalTo($status)
         // );
-
-        $this->expectOutputString('basic');
-        print $status; 
+        // $this->expectOutputString('basic');
+        // print $status; 
     }
 }
