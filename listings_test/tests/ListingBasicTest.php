@@ -19,7 +19,7 @@ class ListingBasicTest extends TestCase
     {
         $this->expectException(Exception::class);
 
-       $newListing = new ListingBasic();
+        $newListing = new ListingBasic();
         $newListing->setId($data['id']);
     }
 }
