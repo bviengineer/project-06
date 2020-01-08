@@ -7,7 +7,7 @@ class ListingBasicTest extends TestCase
         // all three Exception messages are returned as expected.
     
     /** @test */
-    function listingBasicMustReceiveData() {
+    function listingCannotBeCreatedDataIsUnavailable() {
         $this->expectExceptionMessage('Unable to create a listing, data unavailable');
        
         $listingBasic = new ListingBasic();
