@@ -42,4 +42,13 @@ class ListingBasicTest extends TestCase
 
         $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
     }
+
+    /** @test */
+    function getStatusMethodReturnsBasic()
+    {
+        $returnStatus = new ListingBasic();
+        $status = $returnStatus->getStatus();
+        
+        $this->assertThat();
+    }
 }
