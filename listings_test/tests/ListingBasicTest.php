@@ -31,4 +31,12 @@ class ListingBasicTest extends TestCase
         $newListingTitle = new ListingBasic();
         $newListingTitle->setTitle($data['title']);
     }
+
+    /** @test */
+    function listingIsAnObjectIstance()
+    {
+        $listing = new ListingBasic();
+
+        $this->assertInstanceOf('ListingBasic', $listing->setId($data['id']), $listing->setTitle($data['title']));
+    }
 }
