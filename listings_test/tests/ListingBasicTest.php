@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use PHPUnit\Framework\TestCase;
 
@@ -8,9 +8,9 @@ class ListingBasicTest extends TestCase
     
     /** @test */
     function listingBasicMustReceiveData() {
-        $this->expectException(Exception::class);
+        $this->expectExceptionMessage('Unable to create a listing, data unavailable');
        
         $listingBasic = new ListingBasic();
-        $listingBasic->setValues();
+        //$listingBasic->setValues('Unable to create a listing, data unavailable');
     }
 }
