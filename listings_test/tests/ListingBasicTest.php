@@ -10,7 +10,7 @@ class ListingBasicTest extends TestCase
     function listingCannotBeCreatedDataIsUnavailable() {
         $this->expectExceptionMessage('Unable to create a listing, data unavailable');
        
-        $listingBasic = new ListingBasic();
+        new ListingBasic();
         //$listingBasic->setValues('Unable to create a listing, data unavailable');
     }
 }
