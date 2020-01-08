@@ -10,8 +10,13 @@ class ListingBasicTest extends TestCase
     {
         $this->expectExceptionMessage('Unable to create a listing, data unavailable');
        
-        $newListing = new ListingBasic();
-        $newListing->setValues($data);
+        $data = [
+            'id' => 1,
+            'title' => "Caribbean"
+        ];
+        
+        $newListing = new ListingBasic($data); // associative array with the id and value, title and value, and pass it into 
+        //$newListing->setValues($data);
     }
     
     /** @test */
