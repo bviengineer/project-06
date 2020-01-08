@@ -48,11 +48,14 @@ class ListingBasicTest extends TestCase
     {
         $returnStatus = new ListingBasic();
         $status = $returnStatus->getStatus();
-        $myStatus = 'basic';
+        //$myStatus = 'basic';
         
-        $this->assertThat(
-            $myStatus,
-            $this->equalTo($status)
-        );
+        // $this->assertThat(
+        //     $myStatus,
+        //     $this->equalTo($status)
+        // );
+
+        $this->expectOutputString('basic');
+        print $status; 
     }
 }
