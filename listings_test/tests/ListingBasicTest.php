@@ -22,4 +22,13 @@ class ListingBasicTest extends TestCase
         $newListing = new ListingBasic();
         $newListing->setId($data['id']);
     }
+
+    /** @test */
+    function invalidTitleCannotCreateListing()
+    {
+        $this->expectException(Exception::class);
+
+        $newListingTitle = new ListingBasic();
+        $newListingTitle->setTitle($data['title']);
+    }
 }
