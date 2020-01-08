@@ -20,41 +20,41 @@ class ListingBasicTest extends TestCase
     }
     
     /** @test */
-    function invalidIdCannotCreateListing() 
-    {
-        $this->expectException(Exception::class);
+    // function invalidIdCannotCreateListing() 
+    // {
+    //     $this->expectException(Exception::class);
 
-        $newListingId = new ListingBasic();
-        $newListingId->setId($data['id']);
-    }
-
-    /** @test */
-    function invalidTitleCannotCreateListing()
-    {
-        $this->expectException(Exception::class);
-
-        $newListingTitle = new ListingBasic();
-        $newListingTitle->setTitle($data['title']);
-    }
+    //     $newListingId = new ListingBasic();
+    //     $newListingId->setId($data['id']);
+    // }
 
     /** @test */
-    function listingIsAnObjectInstance()
-    {
-        $listing = new ListingBasic();
+    // function invalidTitleCannotCreateListing()
+    // {
+    //     $this->expectException(Exception::class);
+
+    //     $newListingTitle = new ListingBasic();
+    //     $newListingTitle->setTitle($data['title']);
+    // }
+
+    /** @test */
+    // function listingIsAnObjectInstance()
+    // {
+    //     $listing = new ListingBasic();
         //$listing->setValues($data['id'], $data['title']);
         // $listing->setId($data['id']);
         // $listing->setTitle($data['title']);
 
-        $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
-    }
+    //     $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
+    // }
 
     /** @test */
-    function getStatusMethodReturnsBasic()
-    {
-        $returnStatus = new ListingBasic();
-        $status = $returnStatus->setStatus('basic');
+    // function getStatusMethodReturnsBasic()
+    // {
+    //     $returnStatus = new ListingBasic();
+    //     $status = $returnStatus->setStatus('basic');
 
-        $this->assertEquals('basic', $returnStatus->getStatus());
+    //     $this->assertEquals('basic', $returnStatus->getStatus());
 
         //$myStatus = 'basic';
         // $this->assertThat(
@@ -63,5 +63,5 @@ class ListingBasicTest extends TestCase
         // );
         // $this->expectOutputString('basic');
         // print $status; 
-    }
+   // }
 }
