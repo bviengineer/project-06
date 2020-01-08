@@ -17,9 +17,9 @@ class ListingBasicTest extends TestCase
     /** @test */
     function invalidIdCannotCreateListing() 
     {
-        $this->expectExceptionMessage('Unable to create a listing, invalid id');
+        $this->expectException(Exception::class);
 
-        $newListing = new ListingBasic();
+       $newListing = new ListingBasic();
         $newListing->setId($data['id']);
     }
 }
