@@ -1,5 +1,4 @@
 <?php
-// Write a test for the ListingPremium class to ensure that getStatus method returns 'premium'.
 
 use PHPUnit\Framework\TestCase;
 
@@ -22,8 +21,6 @@ class ListingBasicTest extends TestCase
      }
 
      /** @test */
-     //Write a test for the ListingPremium class to ensure that getDescription method returns the expected results.
-     
      function getDescriptionMethodReturnsExcpectedResults()
      {
         // The Data
