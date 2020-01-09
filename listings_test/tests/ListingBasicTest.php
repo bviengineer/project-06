@@ -93,16 +93,20 @@ class ListingBasicTest extends TestCase
        $data = [
            'id' => 4,
            'title' => 'Get Status Method Returns Expected Results',
-           'website' => 'www.teamtreehouse.com',
+           'website' => 'http://www.teamtreehouse.com',
            'email' => 'getcoding@gmail.com',
-           'twitter' => '@code4good',
+           'twitter' => 'code4good',
        ];
 
        // The Instance of ListingBasic
        $getMethod = new ListingBasic($data);
 
-       // Test
+       // Assertions
        //$this->assertSame($data['id'], $getMethod->getId()); // check for another assertion
         $this->assertEqualsCanonicalizing($data['id'], $getMethod->getId()); // best assertion method? 
+        $this->assertEqualsIgnoringCase($data['title'], $getMethod->getTitle());
+        $this->assertEqualsIgnoringCase($data['website'], $getMethod->getWebsite());
+        $this->assertEqualsIgnoringCase($data['email'], $getMethod->getEmail());
+        $this->assertEqualsIgnoringCase($data['twitter'], $getMethod->getTwitter());
    }
 }
