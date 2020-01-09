@@ -38,13 +38,20 @@ class ListingBasicTest extends TestCase
     }
 
     /** @test */
-    // function invalidTitleCannotCreateListing()
-    // {
-    //     $this->expectException(Exception::class);
+    function invalidTitleCannotCreateListing()
+    {
+        // Exception
+        $this->expectException(Exception::class);
 
-    //     $newListingTitle = new ListingBasic();
-    //     $newListingTitle->setTitle($data['title']);
-    // }
+        // Data
+        $data = [
+            'id' => 1,
+            'title' => null
+        ];
+
+        // Code being tested 
+        $newListingTitle = new ListingBasic($data);
+    }
 
     /** @test */
     // function listingIsAnObjectInstance()
