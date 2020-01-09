@@ -91,7 +91,7 @@ class ListingBasicTest extends TestCase
    {
        // The Data
        $data = [
-           'id' => '4',
+           'id' => 4,
            'title' => 'Get Status Method Returns Expected Results',
            'website' => 'www.teamtreehouse.com',
            'email' => 'getcoding@gmail.com',
@@ -102,6 +102,7 @@ class ListingBasicTest extends TestCase
        $getMethod = new ListingBasic($data);
 
        // Test
-       $this->assertSame($data['id'], $getMethod->getId());
+       //$this->assertSame($data['id'], $getMethod->getId()); // check for another assertion
+        $this->assertEqualsCanonicalizing($data['id'], $getMethod->getId()); // best assertion method? 
    }
 }
