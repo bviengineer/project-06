@@ -180,4 +180,9 @@ class ListingBasic
     {
 
     }
+
+    public function getImage()
+    {
+
+    }
 }
