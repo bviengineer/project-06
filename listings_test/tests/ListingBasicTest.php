@@ -44,7 +44,7 @@ class ListingBasicTest extends TestCase
 
         // Data
         $data = [
-            'id' => '1',
+            'id' => 1,
             'title' => null
         ];
 
@@ -57,7 +57,7 @@ class ListingBasicTest extends TestCase
     {
         // Data
         $data = [
-            'id' => '2',
+            'id' => 2,
             'title' => 'Coding is fun though frustrating at times'
         ];
         
@@ -73,7 +73,7 @@ class ListingBasicTest extends TestCase
     {
         // Data
         $data = [
-            'id' => '3',
+            'id' => 3,
             'title' => 'Does Method Return Basic?'
         ];
 
