@@ -33,7 +33,7 @@ class ListingFeaturedTest extends TestCase
         //    'coc' => 'This is the COC'
        ];
 
-       // Instance of ListingPremium  class
+       // Instance of ListingFeatured  class
        $getCoc = new ListingFeatured($data);
        
        // Assertion
