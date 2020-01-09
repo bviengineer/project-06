@@ -26,6 +26,20 @@ class ListingBasicTest extends TestCase
      
      function getDescriptionMethodReturnsExcpectedResults()
      {
-         
+        // The Data
+        $data = [
+            'id' => 2,
+            'title' => 'Return the description',
+            'description' => 'The ListingPremium class extends the ListingBasic class'
+        ];
+
+        // Instance of ListingPremium  class
+        $getDescription = new ListingPremium($data);
+        
+        // Assertion
+        $this->assertThat(
+            $data['description'],
+            $this->equalTo($getDescription->getDescription()),
+        );
      }
 }
