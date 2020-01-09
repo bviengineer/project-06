@@ -83,4 +83,12 @@ class ListingBasicTest extends TestCase
         // Test
         $this->assertEquals('basic', $returnStatus->getStatus());
    }
+
+   /** @test */
+   // Write a test for the ListingBasic class to ensure that the get method for each property is returning the expected results: id, title, website, email, twitter.
+   
+   function getMethodForEachPropertyReturnsExpectedResults() 
+   {
+       
+   }
 }
