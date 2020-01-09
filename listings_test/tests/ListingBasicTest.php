@@ -16,7 +16,7 @@ class ListingBasicTest extends TestCase
             'title' => null
         ];
         
-        // Code to be tested 
+        // Code being tested 
         new ListingBasic($data);
     }
     
@@ -114,7 +114,7 @@ class ListingBasicTest extends TestCase
 
    /** @test */
    //Write a test for the ListingBasic class to ensure that the toArray method returns an array where each item equals the expected results: id, title, website, email, twitter.
-   function toArrayMethodReturnsAnArrayWhereEachItemEqualsTheExpectedResutls()
+   function toArrayMethodReturnsAnArrayWhereEachItemEqualsTheExpectedResults()
    {
     // The Data
     $data = [
@@ -131,9 +131,10 @@ class ListingBasicTest extends TestCase
 
     // Assertions
     $this->assertIsArray($isArray);
+    // $this->assertNotNull($data['id']);
+    // $this->assertNotNull($theListing->getId());
     $this->assertEqualsCanonicalizing($data['id'], $theListing->getId());
-    //$this->assertEqualsCanonicalizing($isArray[0], $theListing->getId());
-   $this->assertEqualsIgnoringCase($data['title'], $theListing->getTitle());
+    $this->assertEqualsIgnoringCase($data['title'], $theListing->getTitle());
     $this->assertEqualsIgnoringCase($data['website'], $theListing->getWebsite());
     $this->assertEqualsIgnoringCase($data['email'], $theListing->getEmail());
     $this->assertEqualsIgnoringCase($data['twitter'], $theListing->getTwitter());
