@@ -116,6 +116,20 @@ class ListingBasicTest extends TestCase
    //Write a test for the ListingBasic class to ensure that the toArray method returns an array where each item equals the expected results: id, title, website, email, twitter.
    function toArrayMethodReturnsAnArrayWhereEachItemEqualsTheExpectedResutls()
    {
-    
+    // The Data
+    $data = [
+        'id' => 5,
+        'title' => 'Expect a title to be returned',
+        'website' => 'http://www.codelife.com',
+        'email' => 'codelife@gmailcom',
+        'twitter' => 'codeLife',
+    ];
+
+    // Instance of ListingBasic Class
+    $theListing = new ListingBasic($data);
+    $isArray = $theListing->toArray();
+
+    // Assertion
+    $this->assertIsArray($isArray);
    }
 }
