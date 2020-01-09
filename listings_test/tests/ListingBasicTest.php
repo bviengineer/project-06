@@ -53,15 +53,20 @@ class ListingBasicTest extends TestCase
     }
 
     /** @test */
-    // function listingIsAnObjectInstance()
-    // {
-    //     $listing = new ListingBasic();
-    //     $listing->setValues($data['id'], $data['title']);
-    //     $listing->setId($data['id']);
-    //     $listing->setTitle($data['title']);
+    function listingIsAnObjectInstance()
+    {
+        // Data
+        $data = [
+            'id' => 2,
+            'title' => 'Coding is fun though frustrating at times'
+        ];
+        
+        // Data to test
+        $listing = new ListingBasic($data);
 
-    //     $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
-    // }
+        // Assertion 
+        $this->assertInstanceOf('ListingBasic', $listing);
+    }
 
     /** @test */
     // function getStatusMethodReturnsBasic()
