@@ -1,5 +1,4 @@
 <?php
-// Write tests for the ListingBasic class to ensure that all three Exception messages are returned as expected.
 
 use PHPUnit\Framework\TestCase;
 
@@ -54,15 +53,15 @@ class ListingBasicTest extends TestCase
     }
 
     /** @test */
-    // function listingIsAnObjectInstance()
-    // {
-    //     $listing = new ListingBasic();
-        //$listing->setValues($data['id'], $data['title']);
-        // $listing->setId($data['id']);
-        // $listing->setTitle($data['title']);
+    function listingIsAnObjectInstance()
+    {
+        $listing = new ListingBasic();
+        $listing->setValues($data['id'], $data['title']);
+        $listing->setId($data['id']);
+        $listing->setTitle($data['title']);
 
-    //     $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
-    // }
+        $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
+    }
 
     /** @test */
     // function getStatusMethodReturnsBasic()
