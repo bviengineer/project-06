@@ -69,19 +69,18 @@ class ListingBasicTest extends TestCase
     }
 
     /** @test */
-    // function getStatusMethodReturnsBasic()
-    // {
-    //     $returnStatus = new ListingBasic();
-    //     $status = $returnStatus->setStatus('basic');
+    function getStatusMethodReturnsBasic()
+    {
+        // Data
+        $data = [
+            'id' => 3,
+            'title' => 'Does Method Return Basic?'
+        ];
 
-    //     $this->assertEquals('basic', $returnStatus->getStatus());
+        // Instance of ListingBasic
+        $returnStatus = new ListingBasic($data);
 
-        //$myStatus = 'basic';
-        // $this->assertThat(
-        //     $myStatus,
-        //     $this->equalTo($status)
-        // );
-        // $this->expectOutputString('basic');
-        // print $status; 
-   // }
+        // Test
+        $this->assertEquals('basic', $returnStatus->getStatus());
+   }
 }
