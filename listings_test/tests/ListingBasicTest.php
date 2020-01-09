@@ -53,7 +53,7 @@ class ListingBasicTest extends TestCase
     }
 
     /** @test */
-    function listingIsAnObjectInstance()
+    function listingIsAnObjectInstance() 
     {
         // Data
         $data = [
@@ -66,6 +66,8 @@ class ListingBasicTest extends TestCase
 
         // Assertion 
         $this->assertInstanceOf('ListingBasic', $listing);
+        // use assertIsOject() instead?
+        $this->assertIsObject($listing);
     }
 
     /** @test */
