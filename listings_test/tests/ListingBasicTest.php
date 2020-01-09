@@ -22,13 +22,20 @@ class ListingBasicTest extends TestCase
     }
     
     /** @test */
-    // function invalidIdCannotCreateListing() 
-    // {
-    //     $this->expectException(Exception::class);
+    function invalidIdCannotCreateListing() 
+    {
+        // Exception
+        $this->expectException(Exception::class);
 
-    //     $newListingId = new ListingBasic();
-    //     $newListingId->setId($data['id']);
-    // }
+        // Data
+        $data = [
+            'id' => null,
+            'title' => 'Caribbean'
+        ];
+
+        // Code being tested 
+        $newListingId = new ListingBasic($data);
+    }
 
     /** @test */
     // function invalidTitleCannotCreateListing()
