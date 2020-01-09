@@ -21,4 +21,26 @@ class ListingFeaturedTest extends TestCase
         $this->assertEquals('featured', $returnStatus->getStatus());
     }
 
+    /** @test */
+    //Write a test for the ListingFeatured class to ensure that getCoc method returns the expected results.
+    
+    function getCocMethodReturnsExcpectedResults()
+    {
+       // The Data
+       $data = [
+           'id' => 2,
+           'title' => 'Return expected results',
+        //    'coc' => 'This is the COC'
+       ];
+
+       // Instance of ListingPremium  class
+       $getCoc = new ListingFeatured($data);
+       
+       // Assertion
+       $this->assertThat(
+           $data['coc'],
+           $this->equalTo($getCoc->getCoc()),
+       );
+    }
+
 }
