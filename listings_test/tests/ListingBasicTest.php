@@ -111,4 +111,11 @@ class ListingBasicTest extends TestCase
         $this->assertEqualsIgnoringCase($data['email'], $getMethod->getEmail());
         $this->assertEqualsIgnoringCase($data['twitter'], $getMethod->getTwitter());
    }
+
+   /** @test */
+   //Write a test for the ListingBasic class to ensure that the toArray method returns an array where each item equals the expected results: id, title, website, email, twitter.
+   function toArrayMethodReturnsAnArrayWhereEachItemEqualsTheExpectedResutls()
+   {
+    
+   }
 }
