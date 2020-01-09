@@ -17,7 +17,7 @@ class ListingBasicTest extends TestCase
         ];
         
         // Code to be tested 
-        $newListing = new ListingBasic($data);
+        new ListingBasic($data);
     }
     
     /** @test */
@@ -33,7 +33,7 @@ class ListingBasicTest extends TestCase
         ];
 
         // Code being tested 
-        $newListingId = new ListingBasic($data);
+        new ListingBasic($data);
     }
 
     /** @test */
@@ -49,19 +49,19 @@ class ListingBasicTest extends TestCase
         ];
 
         // Code being tested 
-        $newListingTitle = new ListingBasic($data);
+        new ListingBasic($data);
     }
 
     /** @test */
-    function listingIsAnObjectInstance()
-    {
-        $listing = new ListingBasic();
-        $listing->setValues($data['id'], $data['title']);
-        $listing->setId($data['id']);
-        $listing->setTitle($data['title']);
+    // function listingIsAnObjectInstance()
+    // {
+    //     $listing = new ListingBasic();
+    //     $listing->setValues($data['id'], $data['title']);
+    //     $listing->setId($data['id']);
+    //     $listing->setTitle($data['title']);
 
-        $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
-    }
+    //     $this->assertInstanceOf('ListingBasic', $listing->setValues($data['id'], $data['title']));
+    // }
 
     /** @test */
     // function getStatusMethodReturnsBasic()
