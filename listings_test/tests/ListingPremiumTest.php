@@ -8,7 +8,7 @@ class ListingBasicTest extends TestCase
       /** @test */
       function getStatusMethodReturnsPremium()
       {
-          // Data
+          // The Data
           $data = [
               'id' => 1,
               'title' => 'Verify the status for this premium class'
@@ -19,5 +19,13 @@ class ListingBasicTest extends TestCase
   
           // Test
           $this->assertEquals('premium', $returnStatus->getStatus());
+     }
+
+     /** @test */
+     //Write a test for the ListingPremium class to ensure that getDescription method returns the expected results.
+     
+     function getDescriptionMethodReturnsExcpectedResults()
+     {
+         
      }
 }
