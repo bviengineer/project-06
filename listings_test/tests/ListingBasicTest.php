@@ -129,7 +129,13 @@ class ListingBasicTest extends TestCase
     $theListing = new ListingBasic($data);
     $isArray = $theListing->toArray();
 
-    // Assertion
+    // Assertions
     $this->assertIsArray($isArray);
+    $this->assertEqualsCanonicalizing($data['id'], $theListing->getId());
+    //$this->assertEqualsCanonicalizing($isArray[0], $theListing->getId());
+   $this->assertEqualsIgnoringCase($data['title'], $theListing->getTitle());
+    $this->assertEqualsIgnoringCase($data['website'], $theListing->getWebsite());
+    $this->assertEqualsIgnoringCase($data['email'], $theListing->getEmail());
+    $this->assertEqualsIgnoringCase($data['twitter'], $theListing->getTwitter());
    }
 }
