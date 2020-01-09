@@ -8,19 +8,17 @@ class ListingFeaturedTest extends TestCase
     /** @test */
     function getStatusMethodReturnsFeatured()
     {
-        {
-            // The Data
-            $data = [
-                'id' => 1,
-                'title' => 'Verify that the status for this is featured'
-            ];
-    
-            // Instance of ListingFeatured
-            $returnStatus = new ListingFeatured($data);
-    
-            // Test
-            $this->assertEquals('featured', $returnStatus->getStatus());
-       }
+        // The Data
+        $data = [
+            'id' => 1,
+            'title' => 'Verify that the status for this is featured'
+        ];
+
+        // Instance of ListingFeatured
+        $returnStatus = new ListingFeatured($data);
+
+        // Test
+        $this->assertEquals('featured', $returnStatus->getStatus());
     }
 
 }
