@@ -28,9 +28,9 @@ class ListingFeaturedTest extends TestCase
     {
        // The Data
        $data = [
-           'id' => 2,
-           'title' => 'Return expected results',
-        //    'coc' => 'This is the COC'
+            'id' => 2,
+            'title' => 'Return expected results',
+            'coc' => 'This is the COC'
        ];
 
        // Instance of ListingFeatured  class
