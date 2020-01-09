@@ -44,7 +44,7 @@ class ListingBasicTest extends TestCase
 
         // Data
         $data = [
-            'id' => 1,
+            'id' => '1',
             'title' => null
         ];
 
@@ -57,7 +57,7 @@ class ListingBasicTest extends TestCase
     {
         // Data
         $data = [
-            'id' => 2,
+            'id' => '2',
             'title' => 'Coding is fun though frustrating at times'
         ];
         
@@ -73,7 +73,7 @@ class ListingBasicTest extends TestCase
     {
         // Data
         $data = [
-            'id' => 3,
+            'id' => '3',
             'title' => 'Does Method Return Basic?'
         ];
 
@@ -89,6 +89,19 @@ class ListingBasicTest extends TestCase
    
    function getMethodForEachPropertyReturnsExpectedResults() 
    {
-       
+       // The Data
+       $data = [
+           'id' => '4',
+           'title' => 'Get Status Method Returns Expected Results',
+           'website' => 'www.teamtreehouse.com',
+           'email' => 'getcoding@gmail.com',
+           'twitter' => '@code4good',
+       ];
+
+       // The Instance of ListingBasic
+       $getMethod = new ListingBasic($data);
+
+       // Test
+       $this->assertSame($data['id'], $getMethod->getId());
    }
 }
