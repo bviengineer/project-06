@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ListingBasicTest extends TestCase 
+class ListingPremiumTest extends TestCase 
 {
       /** @test */
       function getStatusMethodReturnsPremium()
