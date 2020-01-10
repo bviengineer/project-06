@@ -178,6 +178,7 @@ class ListingBasic
 
     public function setImage($value)
     {
+        $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
         if (empty($value)) {
             $this->image = false;
             return;
