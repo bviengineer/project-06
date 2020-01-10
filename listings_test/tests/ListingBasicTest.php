@@ -7,55 +7,55 @@ class ListingBasicTest extends TestCase
     /** @test */
     function listingCannotBeCreatedDataIsUnavailable() 
     {
-        // Exception
+        // Assertion
         $this->expectException(Exception::class);
        
-        // Data 
+        // The Data 
         $data = [
             'id' => null,
             'title' => null
         ];
         
-        // Code being tested 
+        // Code being tested (constructor will be called)
         new ListingBasic($data);
     }
     
     /** @test */
     function invalidIdCannotCreateListing() 
     {
-        // Exception
+        // Assertion
         $this->expectException(Exception::class);
 
-        // Data
+        // The Data
         $data = [
             'id' => null,
             'title' => 'Caribbean'
         ];
 
-        // Code being tested 
+        // Code being tested (constructor will be called)
         new ListingBasic($data);
     }
 
     /** @test */
     function invalidTitleCannotCreateListing()
     {
-        // Exception
+        // Assertion
         $this->expectException(Exception::class);
 
-        // Data
+        // The Data
         $data = [
             'id' => 1,
             'title' => null
         ];
 
-        // Code being tested 
+        // Code being tested (constructor will be called)
         new ListingBasic($data);
     }
 
     /** @test */
     function listingIsAnObjectInstance() 
     {
-        // Data
+        // The Data
         $data = [
             'id' => 2,
             'title' => 'Coding is fun though frustrating at times'
@@ -65,15 +65,13 @@ class ListingBasicTest extends TestCase
         $listing = new ListingBasic($data);
 
         // Assertion 
-        $this->assertInstanceOf('ListingBasic', $listing);
-        // use assertIsOject() instead?
         $this->assertIsObject($listing);
     }
 
     /** @test */
     function getStatusMethodReturnsBasic()
     {
-        // Data
+        // The Data
         $data = [
             'id' => 3,
             'title' => 'Does Method Return Basic?'
@@ -82,13 +80,11 @@ class ListingBasicTest extends TestCase
         // Instance of ListingBasic
         $returnStatus = new ListingBasic($data);
 
-        // Test
+        // Assertion
         $this->assertEquals('basic', $returnStatus->getStatus());
    }
 
    /** @test */
-   // Write a test for the ListingBasic class to ensure that the get method for each property is returning the expected results: id, title, website, email, twitter.
-   
    function getMethodForEachPropertyReturnsExpectedResults() 
    {
        // The Data
@@ -105,7 +101,7 @@ class ListingBasicTest extends TestCase
 
        // Assertions
        //$this->assertSame($data['id'], $getMethod->getId()); // check for another assertion
-        $this->assertEqualsCanonicalizing($data['id'], $getMethod->getId()); // best assertion method? 
+        $this->assertEqualsCanonicalizing($data['id'], $getMethod->getId());
         $this->assertEqualsIgnoringCase($data['title'], $getMethod->getTitle());
         $this->assertEqualsIgnoringCase($data['website'], $getMethod->getWebsite());
         $this->assertEqualsIgnoringCase($data['email'], $getMethod->getEmail());
@@ -113,7 +109,6 @@ class ListingBasicTest extends TestCase
    }
 
    /** @test */
-   //Write a test for the ListingBasic class to ensure that the toArray method returns an array where each item equals the expected results: id, title, website, email, twitter.
    function toArrayMethodReturnsAnArrayWhereEachItemEqualsTheExpectedResults()
    {
     // The Data
