@@ -4,7 +4,6 @@ use PHPUnit\Framework\TestCase;
 
 class ListingFeaturedTest extends TestCase 
 {
-// Write a test for the ListingFeatured class to ensure that getStatus method returns 'featured'.
     /** @test */
     function getStatusMethodReturnsFeatured()
     {
@@ -22,8 +21,6 @@ class ListingFeaturedTest extends TestCase
     }
 
     /** @test */
-    //Write a test for the ListingFeatured class to ensure that getCoc method returns the expected results.
-    
     function getCocMethodReturnsExcpectedResults()
     {
        // The Data
@@ -42,5 +39,4 @@ class ListingFeaturedTest extends TestCase
            $this->equalTo($getCoc->getCoc()),
        );
     }
-
 }
