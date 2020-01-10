@@ -180,8 +180,7 @@ class ListingBasic
     {
         $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
         if (empty($value)) {
-            $this->image = false;
-            return;
+            return $this->image = false;
         }
         if (substr($value, 0, 4) == 'http') {
             $value = $value;
