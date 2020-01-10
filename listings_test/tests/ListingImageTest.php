@@ -41,6 +41,6 @@ class ListingImageTest extends TestCase
             'image' => 'images/listings/1.png',
         ];
         $listing = new ListingBasic($data);
-        $this->assertEquals('images/listings'.'/'.$data['image'], $listing->getImage());
+        $this->assertEquals('/'.$data['image'], $listing->getImage());
     }
 }
