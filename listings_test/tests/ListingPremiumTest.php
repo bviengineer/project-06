@@ -16,7 +16,7 @@ class ListingPremiumTest extends TestCase
           // Instance of ListingPremium
           $returnStatus = new ListingPremium($data);
   
-          // Test
+          // Assertion
           $this->assertEquals('premium', $returnStatus->getStatus());
      }
 
