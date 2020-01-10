@@ -100,7 +100,6 @@ class ListingBasicTest extends TestCase
        $listing = new ListingBasic($data);
 
        // Assertions
-       //$this->assertSame($data['id'], $getMethod->getId()); // check for another assertion
         $this->assertEqualsCanonicalizing($data['id'], $listing->getId());
         $this->assertEqualsIgnoringCase($data['title'], $listing->getTitle());
         $this->assertEqualsIgnoringCase($data['website'], $listing->getWebsite());
