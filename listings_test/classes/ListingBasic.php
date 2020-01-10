@@ -187,7 +187,7 @@ class ListingBasic
             $value = $value;
         } else if (substr($value, 0, 5) == 'https' ) {
             $value = $value;
-        } else if (substr($value, 0, 4) != 'http' || substr($value, 0, 5) == 'https' || substr(0, 2 != '//')) {
+        } else if (substr($value, 0, 4) != 'http' || substr($value, 0, 5) != 'https' || substr(0, 2 != '//')) {
             $value = '//' . $value;
         }
         $this->image = $value;
