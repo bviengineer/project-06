@@ -182,6 +182,14 @@ class ListingBasic
             $this->image = false;
             return;
         }
+        if (substr($value, 0, 4) == 'http') {
+            $value = $value;
+        } else if (substr($value, 0, 5) == 'https' ) {
+            $value = $value;
+        } else {
+            $value = $value;
+        }
+        $this->image = $value;
     }
 
     public function getImage()
