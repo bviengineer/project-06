@@ -176,13 +176,16 @@ class ListingBasic
         return get_object_vars($this);
     }
 
-    public function setImage()
+    public function setImage($value)
     {
-
+        if (empty($value)) {
+            $this->image = false;
+            return;
+        }
     }
 
     public function getImage()
     {
-
+        return $this->image;
     }
 }
