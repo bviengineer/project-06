@@ -17,7 +17,7 @@ class ListingBasicTest extends TestCase
         ];
         
         // Code being tested (constructor will be called)
-        new ListingBasic($data);
+        $listing = new ListingBasic($data);
     }
     
     /** @test */
@@ -33,7 +33,7 @@ class ListingBasicTest extends TestCase
         ];
 
         // Code being tested (constructor will be called)
-        new ListingBasic($data);
+        $listing = new ListingBasic($data);
     }
 
     /** @test */
@@ -49,7 +49,7 @@ class ListingBasicTest extends TestCase
         ];
 
         // Code being tested (constructor will be called)
-        new ListingBasic($data);
+        $listing = new ListingBasic($data);
     }
 
     /** @test */
@@ -78,10 +78,10 @@ class ListingBasicTest extends TestCase
         ];
 
         // Instance of ListingBasic
-        $returnStatus = new ListingBasic($data);
+        $listing = new ListingBasic($data);
 
         // Assertion
-        $this->assertEquals('basic', $returnStatus->getStatus());
+        $this->assertEquals('basic', $listing->getStatus());
    }
 
    /** @test */
@@ -97,15 +97,15 @@ class ListingBasicTest extends TestCase
        ];
 
        // The Instance of ListingBasic
-       $getMethod = new ListingBasic($data);
+       $listing = new ListingBasic($data);
 
        // Assertions
        //$this->assertSame($data['id'], $getMethod->getId()); // check for another assertion
-        $this->assertEqualsCanonicalizing($data['id'], $getMethod->getId());
-        $this->assertEqualsIgnoringCase($data['title'], $getMethod->getTitle());
-        $this->assertEqualsIgnoringCase($data['website'], $getMethod->getWebsite());
-        $this->assertEqualsIgnoringCase($data['email'], $getMethod->getEmail());
-        $this->assertEqualsIgnoringCase($data['twitter'], $getMethod->getTwitter());
+        $this->assertEqualsCanonicalizing($data['id'], $listing->getId());
+        $this->assertEqualsIgnoringCase($data['title'], $listing->getTitle());
+        $this->assertEqualsIgnoringCase($data['website'], $listing->getWebsite());
+        $this->assertEqualsIgnoringCase($data['email'], $listing->getEmail());
+        $this->assertEqualsIgnoringCase($data['twitter'], $listing->getTwitter());
    }
 
    /** @test */
@@ -121,17 +121,17 @@ class ListingBasicTest extends TestCase
     ];
 
     // Instance of ListingBasic Class
-    $theListing = new ListingBasic($data);
-    $isArray = $theListing->toArray();
+    $listing = new ListingBasic($data);
+    $isArray = $listing->toArray();
 
     // Assertions
     $this->assertIsArray($isArray);
     // $this->assertNotNull($data['id']);
     // $this->assertNotNull($theListing->getId());
-    $this->assertEqualsCanonicalizing($data['id'], $theListing->getId());
-    $this->assertEqualsIgnoringCase($data['title'], $theListing->getTitle());
-    $this->assertEqualsIgnoringCase($data['website'], $theListing->getWebsite());
-    $this->assertEqualsIgnoringCase($data['email'], $theListing->getEmail());
-    $this->assertEqualsIgnoringCase($data['twitter'], $theListing->getTwitter());
+    $this->assertEqualsCanonicalizing($data['id'], $listing->getId());
+    $this->assertEqualsIgnoringCase($data['title'], $listing->getTitle());
+    $this->assertEqualsIgnoringCase($data['website'], $listing->getWebsite());
+    $this->assertEqualsIgnoringCase($data['email'], $listing->getEmail());
+    $this->assertEqualsIgnoringCase($data['twitter'], $listing->getTwitter());
    }
 }
