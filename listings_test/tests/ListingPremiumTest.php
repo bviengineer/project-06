@@ -40,4 +40,14 @@ class ListingPremiumTest extends TestCase
             $this->equalTo($getDescription->getDescription()),
         );
      }
+
+     /** @test */
+     function displayAllowedTags()
+     {
+         $this->assertStringMatchesFormat(
+            htmlspecialchars('<p><br><b><strong><em><u><ol><ul><li>'),
+             ListingPremium::displayAllowedTags()
+            );
+
+     }
 }
