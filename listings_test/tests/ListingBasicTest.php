@@ -107,7 +107,7 @@ class ListingBasicTest extends TestCase
         $this->assertEqualsIgnoringCase($data['website'], $listing->getWebsite());
         $this->assertEqualsIgnoringCase($data['email'], $listing->getEmail());
         $this->assertEqualsIgnoringCase($data['twitter'], $listing->getTwitter());
-        $this->assertTrue($data['image'], $listing->getImage());
+        $this->assertNotEmpty($listing->getImage());
    }
 
    /** @test */
