@@ -1,5 +1,5 @@
 <?php
-
+ 
 use PHPUnit\Framework\TestCase;
 
 class ListingPremiumTest extends TestCase 
@@ -34,6 +34,7 @@ class ListingPremiumTest extends TestCase
         $getDescription = new ListingPremium($data);
         
         // Assertion
+        $this->assertNotNull($data['description']);
         $this->assertThat(
             $data['description'],
             $this->equalTo($getDescription->getDescription()),
