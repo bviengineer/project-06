@@ -4,6 +4,20 @@ Listing Basic
  [x] Invalid title cannot create listing
  [x] Listing is an object instance
  [x] Get status method returns basic
- [ ] Get method for each property returns expected results
+ [x] Get method for each property returns expected results
  [x] To array method returns an array where each item equals the expected results
+ [ ] Website is null
+
+Listing Featured
+ [x] Get status method returns featured
+ [x] Get coc method returns excpected results
+
+Listing Image
+ [x] No image
+ [x] Full path image
+ [x] Build path image
+
+Listing Premium
+ [x] Get status method returns premium
+ [x] Get description method returns excpected results
 

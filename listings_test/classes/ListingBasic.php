@@ -100,8 +100,8 @@ class ListingBasic
     {
         $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
         if (empty($value)) {
-            $this->website = false;
-            return;
+            $this->website = null;
+            //return;
         }
         if (substr($value, 0, 4) != 'http') {
             $value = 'http://' . $value;
@@ -162,7 +162,7 @@ class ListingBasic
     {
         if (empty($value)) {
             $this->status = 'basic';
-            return;
+            // return;
         }
         $this->status = trim(filter_var($value, FILTER_SANITIZE_STRING));
     }
@@ -180,13 +180,12 @@ class ListingBasic
     {
         $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
         if (empty($value)) {
-            return $this->image = false;
-        }
-        if (substr($value, 0, 4) == 'http') {
+            $this->image = false;
+        } else if (substr($value, 0, 4) == 'http') {
             $value = $value;
-        } else if (substr($value, 0, 5) == 'https' ) {
-            $value = $value;
-        } else if (substr($value, 0, 4) != 'http' || substr($value, 0, 5) != 'https' || substr(0, 2 != '//')) {
+         } //else if (substr($value, 0, 5) == 'https' ) {
+        //     $value = $value; }
+         else if (!empty($value) && substr($value, 0, 4) != 'http' || substr(0, 2 != '//')) {
             $value = '//' . $value;
         }
         $this->image = $value;
