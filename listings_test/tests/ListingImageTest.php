@@ -19,7 +19,8 @@ class ListingImageTest extends TestCase
             'image' => '',
         ];
         $listing = new ListingBasic($data);
-        $this->assertFalse($listing->getImage());
+        // $this->assertFalse($listing->getImage());
+        $this->assertEmpty($data['image']);
 
     }
     public function testFullPathImage()
@@ -31,6 +32,7 @@ class ListingImageTest extends TestCase
             'image' => 'https://www.cascadiaphp.com/images/logo.svg',
         ];
         $listing = new ListingBasic($data);
+        $this->assertIsString($data['image']);
         $this->assertEquals($data['image'], $listing->getImage());
 
     }
