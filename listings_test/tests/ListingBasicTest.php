@@ -143,7 +143,7 @@ class ListingBasicTest extends TestCase
        $data = [
            'id' => 6,
            'title' => 'The website is blank',
-           'website' => ''
+           'website' => null
        ];
 
        // Instance of ListingBasic class
