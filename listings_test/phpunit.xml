@@ -1,6 +1,7 @@
 <phpunit 
     bootstrap="vendor/autoload.php"
     colors="true"
+    printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
 >
     <!-- <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
