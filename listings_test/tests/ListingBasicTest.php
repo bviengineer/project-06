@@ -94,7 +94,7 @@ class ListingBasicTest extends TestCase
            'website' => 'http://www.teamtreehouse.com',
            'email' => 'getcoding@gmail.com',
            'twitter' => 'code4good',
-           'status' => 'basic',
+           'status' => '',
            'image' => 'images/listings/1.png'
        ];
 
@@ -107,6 +107,7 @@ class ListingBasicTest extends TestCase
         $this->assertEqualsIgnoringCase($data['website'], $listing->getWebsite());
         $this->assertEqualsIgnoringCase($data['email'], $listing->getEmail());
         $this->assertEqualsIgnoringCase($data['twitter'], $listing->getTwitter());
+        $this->assertEquals($data['status'], $listing->getStatus());
         $this->assertNotEmpty($listing->getImage());
    }
 
