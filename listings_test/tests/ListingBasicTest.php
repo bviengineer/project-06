@@ -135,4 +135,21 @@ class ListingBasicTest extends TestCase
     $this->assertEqualsIgnoringCase($data['email'], $listing->getEmail());
     $this->assertEqualsIgnoringCase($data['twitter'], $listing->getTwitter());
    }
+
+   /** @test */
+   function websiteIsNull() 
+   {
+       // The data
+       $data = [
+           'id' => 6,
+           'title' => 'The website is blank',
+           'website' => ''
+       ];
+
+       // Instance of ListingBasic class
+       $listing = new ListingBasic($data);
+
+       // Assertion 
+       $this->assertNull($listing->getWebsite());
+   }
 }
