@@ -12,8 +12,8 @@ class ListingBasicTest extends TestCase
        
         // The Data 
         $data = [
-            'id' => null,
-            'title' => null
+            // 'id' => null,
+            // 'title' => null
         ];
         
         // Code being tested (constructor will be called)
