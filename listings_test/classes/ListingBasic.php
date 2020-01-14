@@ -100,7 +100,7 @@ class ListingBasic
     {
         $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
         if (empty($value)) {
-            $this->website = null;
+            $this->website = false;
             return;
         }
         if (substr($value, 0, 4) != 'http') {

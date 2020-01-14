@@ -4,6 +4,6 @@ Listing Basic
  [x] Invalid title cannot create listing
  [x] Listing is an object instance
  [x] Get status method returns basic
- [x] Get method for each property returns expected results
+ [ ] Get method for each property returns expected results
  [x] To array method returns an array where each item equals the expected results
 
