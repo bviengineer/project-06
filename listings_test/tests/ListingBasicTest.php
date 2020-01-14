@@ -94,6 +94,7 @@ class ListingBasicTest extends TestCase
            'website' => 'http://www.teamtreehouse.com',
            'email' => 'getcoding@gmail.com',
            'twitter' => 'code4good',
+           'status' => 'basic'
        ];
 
        // The Instance of ListingBasic
