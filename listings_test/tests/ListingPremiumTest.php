@@ -37,7 +37,7 @@ class ListingPremiumTest extends TestCase
         $this->assertNotNull($data['description']);
         $this->assertThat(
             $data['description'],
-            $this->equalTo($getDescription->getDescription()),
+            $this->equalTo($getDescription->getDescription())
         );
      }
 

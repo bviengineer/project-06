@@ -36,7 +36,7 @@ class ListingFeaturedTest extends TestCase
        // Assertion
        $this->assertThat(
            $data['coc'],
-           $this->equalTo($getCoc->getCoc()),
+           $this->equalTo($getCoc->getCoc())
        );
     }
 }
