@@ -156,6 +156,25 @@ class ListingBasicTest extends TestCase
    /** @test */
    function isWebsiteSet()
    {
-       
-   }
+//     if (substr($value, 0, 4) != 'http') {
+//         $value = 'http://' . $value;
+//     }
+//     $this->website = $value;
+
+        // The data
+        $data = [
+            'id' => 7,
+            'title' => 'Is the website prefixed with http?',
+            'website' => 'teamtreehouse.com'
+        ];
+
+        // Passing the data to instance of the class for testing
+        $listing = new ListingBasic($data);
+
+        $this->assertStringMatchesFormat(
+            $listing->getWebsite(),
+            'http://' . $data['website']
+        );
+
+    }
 }

@@ -7,6 +7,7 @@ Listing Basic
  [x] Get method for each property returns expected results
  [x] To array method returns an array where each item equals the expected results
  [x] Website is null
+ [x] Is website set
 
 Listing Featured
  [x] Get status method returns featured
