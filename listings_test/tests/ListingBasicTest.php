@@ -156,11 +156,6 @@ class ListingBasicTest extends TestCase
    /** @test */
    function isWebsiteSet()
    {
-//     if (substr($value, 0, 4) != 'http') {
-//         $value = 'http://' . $value;
-//     }
-//     $this->website = $value;
-
         // The data
         $data = [
             'id' => 7,
@@ -175,6 +170,5 @@ class ListingBasicTest extends TestCase
             $listing->getWebsite(),
             'http://' . $data['website']
         );
-
     }
 }
