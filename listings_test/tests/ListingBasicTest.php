@@ -152,4 +152,10 @@ class ListingBasicTest extends TestCase
        // Assertion 
        $this->assertNull($listing->getWebsite());
    }
+
+   /** @test */
+   function isWebsiteSet()
+   {
+       
+   }
 }
