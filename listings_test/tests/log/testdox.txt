@@ -8,6 +8,8 @@ Listing Basic
  [x] To array method returns an array where each item equals the expected results
  [x] Website is null
  [x] Is website set
+ [x] Status is set
+ [x] Is status empty
 
 Listing Featured
  [x] Get status method returns featured

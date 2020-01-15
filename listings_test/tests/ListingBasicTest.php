@@ -94,8 +94,6 @@ class ListingBasicTest extends TestCase
            'website' => 'http://www.teamtreehouse.com',
            'email' => 'getcoding@gmail.com',
            'twitter' => 'code4good',
-           'status' => 'basic',
-           'image' => 'images/listings/1.png'
        ];
 
        // The Instance of ListingBasic
@@ -107,8 +105,6 @@ class ListingBasicTest extends TestCase
         $this->assertEqualsIgnoringCase($data['website'], $listing->getWebsite());
         $this->assertEqualsIgnoringCase($data['email'], $listing->getEmail());
         $this->assertEqualsIgnoringCase($data['twitter'], $listing->getTwitter());
-        $this->assertEquals($data['status'], $listing->getStatus());
-        // $this->assertNotEmpty($listing->getImage());
    }
 
    /** @test */
@@ -170,5 +166,39 @@ class ListingBasicTest extends TestCase
             $listing->getWebsite(),
             'http://' . $data['website']
         );
+    }
+
+    /** @test */
+    function statusIsSet()
+    {
+        // The data
+        $data = [
+            'id' => 8,
+            'title' => 'The status is set',
+            'status' => 'basic'
+        ];
+
+        // Passing the data to instance of the class for testing
+        $listing = new ListingBasic($data);
+
+        // Assertions
+        $this->assertNotEmpty($listing->getStatus());
+    }
+
+    /** @test */
+    function isStatusEmpty()
+    {
+        // The data
+        $data = [
+            'id' => 9,
+            'title' => 'The status is empty',
+            'status' => ''
+        ];
+
+        // Passing the data to instance of the class for testing
+        $listing = new ListingBasic($data);
+
+        // Assertions
+        $this->assertNotEmpty($listing->getStatus());
     }
 }
